@@ -44,7 +44,7 @@
   /* ── HEADER ── */
   .masthead {
     border-bottom: 2px solid var(--ink);
-    padding: 2rem 3rem 1.5rem;
+    padding: 1.4rem 3rem 1.2rem;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: end;
@@ -69,6 +69,37 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding-bottom: 0.15rem;
+  }
+
+  .masthead-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .pdf-viewer-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid var(--dust);
+    padding: 0.25rem 0.6rem;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+
+  .pdf-viewer-link:hover {
+    color: var(--amber);
+    border-color: var(--amber);
+    background: rgba(200,130,26,0.06);
+  }
+
+  .pdf-viewer-link::before {
+    content: '◈ ';
+    opacity: 0.6;
   }
 
   /* ── EPIGRAPH ── */
@@ -532,8 +563,9 @@
     <div class="masthead-title">Uganda-26</div>
     <div class="masthead-sub">okubala si kulaba · to count is not to see · Kampala, May 2026</div>
   </div>
-  <div class="masthead-sub" style="text-align:right; padding-bottom:0.15rem;">
-    Ukubona<br>dim⁷ → 4 exits
+  <div class="masthead-right">
+    <div class="masthead-sub" style="text-align:right;">Ukubona · dim⁷ → 4 exits</div>
+    <a class="pdf-viewer-link" href="https://ukubona-llc.github.io/pdf-viewer/" target="_blank" rel="noopener">PDF Viewer</a>
   </div>
 </header>
 
